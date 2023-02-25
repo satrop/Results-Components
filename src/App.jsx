@@ -47,7 +47,7 @@ function App() {
 		<main>
 			<CardHead />
 			<motion.div
-				className="bar-container | full-bleed"
+				className="bar-container"
 				variants={container}
 				initial="hidden"
 				animate="visible">

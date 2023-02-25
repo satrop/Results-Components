@@ -24,7 +24,7 @@ const CardHead = () => {
 	const transition = { duration: 4, yoyo: Infinity, ease: 'easeInOut' };
 
 	return (
-		<div className="card card--head | border-radius--lg gradient-1 full-bleed white--fc flow">
+		<div className="card card--head | border-radius--lg gradient-1 white--fc flow">
 			<div className="result--header | light-blue--fc">Your Results</div>
 			<div className="result-holder">
 				<div className="result--total">
