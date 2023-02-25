@@ -1,0 +1,102 @@
+@use '../globals/breaks' as b;
+
+.card--head {
+    padding: 1.5rem 1.875rem 2.688rem;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .result-holder {
+        width: 8.75rem;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background: var(--gradient-2);
+        margin-inline: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        position: relative;
+
+        .stroke {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: rotate(-90deg);
+
+            circle {
+                stroke: rgba(#fff, .15);
+            }
+        }
+
+        @include b.breakpoint(md) {
+            width: 12.5rem;
+        }
+    }
+
+    @include b.breakpoint(md) {
+        --flow: 2rem;
+    }
+
+    .result {
+        &--header {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--clr-300);
+        }
+
+        &--total {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 3.4rem;
+        }
+
+        &--percent {
+            font-weight: 700;
+            color: var(--clr-300);
+        }
+
+        &--title {
+            font-size: 1.5rem;
+            line-height: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        &--text {
+            max-width: 30ch;
+            margin-inline: auto;
+        }
+
+        @include b.breakpoint(md) {
+
+            &--header {
+                font-size: 1.5rem;
+            }
+
+            &--total {
+                font-size: 4.5rem;
+                margin-bottom: 15px;
+            }
+
+            &--percent {
+                font-size: 1.125rem;
+            }
+
+            &--title {
+                font-size: 2rem;
+                margin-bottom: 1.4rem;
+            }
+
+            &--text {
+                font-size: 1.2rem;
+                line-height: 23px;
+                max-width: 26ch;
+            }
+        }
+    }
+}

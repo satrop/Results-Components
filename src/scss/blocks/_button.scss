@@ -1,0 +1,41 @@
+button {
+    width: 100%;
+    height: 56px;
+    text-align: center;
+    border-radius: 50rem;
+    border: 0;
+    padding: 0;
+    background: var(--clr-400);
+    color: var(--clr-100);
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+
+    span {
+        position: relative;
+        z-index: 2;
+        text-shadow: 0 0 1px rgba(#000, .5);
+    }
+
+    &::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: var(--gradient-1);
+        z-index: 1;
+        pointer-events: none;
+        opacity: 0;
+        transition: all var(--trans-dur);
+    }
+
+    &:hover {
+
+        &::before {
+            opacity: 1;
+            height: 56px;
+        }
+    }
+}

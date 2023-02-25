@@ -1,0 +1,28 @@
+:root {
+    --clr-100: hsla(0, 100%, 100%, 1); // White | #fff
+    --clr-200: hsla(221, 100%, 96%, 1); // Very light blue | #ECF2FF
+    --clr-300: hsla(241, 100%, 89%, 1); // Light blue | #CAC9FF
+    --clr-400: hsla(224, 30%, 27%, 1); // Dark Navy | #303B59
+    --clr-500: hsla(0, 100%, 67%, 1); // Red | #FF5555
+    --clr-600: hsla(166, 100%, 37%, 1); // Green | #00BB8F
+    --clr-700: hsla(234, 85%, 45%, 1); // Blue | #1125D6
+    --clr-800: hsla(39, 100%, 56%, 1); // Yellow | #FFB21E
+
+    --clr-100-90: hsla(0, 100%, 100%, 0.95); // White 90%
+    --clr-500-90: linear-gradient(0deg, var(--clr-100-90), var(--clr-100-90)), var(--clr-500); // Red 90%
+    --clr-600-90: linear-gradient(0deg, var(--clr-100-90), var(--clr-100-90)), var(--clr-600); // Green 90%
+    --clr-700-90: linear-gradient(0deg, var(--clr-100-90), var(--clr-100-90)), var(--clr-700); // Blue 90%
+    --clr-800-90: linear-gradient(0deg, var(--clr-100-90), var(--clr-100-90)), var(--clr-800); // Yellow 90%
+
+    --gradient-1: linear-gradient(180deg, hsla(252, 100%, 67%, 1) 0%, hsla(252, 100%, 63%, 1) 0.01%, hsla(241, 81%, 54%, 1) 100%);
+    --gradient-2: linear-gradient(180deg, hsla(256, 72%, 46%, 1) 0%, hsla(241, 72%, 46%, 0) 100%, hsla(241, 72%, 46%, 0) 100%);
+
+    --trans-dur: 0.3s ease-in-out;
+
+    --br-sm: 0.75rem;
+    --br-lg: 2rem;
+
+    --ff: 'Hanken Grotesk', sans-serif;
+
+    --flow: 1.5rem;
+}

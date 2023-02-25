@@ -1,0 +1,42 @@
+@use '../globals/breaks' as b;
+
+body {
+    overflow-x: hidden;
+    line-height: 1.438rem;
+    font-family: var(--ff);
+    font-size: 1rem;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--clr-200);
+    display: grid;
+    place-items: center;
+}
+
+main {
+    width: clamp(375px, 80vw, 736px);
+    margin-inline: auto;
+    position: relative;
+    border-radius: var(--br-lg);
+
+    &::after {
+        content: "";
+        position: absolute;
+        border-radius: var(--br-lg);
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        box-shadow: 0 11px 11px rgb(0 0 0 / 60%),
+            0 12px 12px rgb(0 0 0 / 60%),
+            0 14px 14px rgb(0 0 0 / 60%),
+            0 18px 18px rgb(0 0 0 / 60%),
+            0 32px 32px rgb(0 0 0 / 60%);
+        mix-blend-mode: soft-light;
+    }
+
+    @include b.breakpoint(md) {
+        // max-width: 736px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}

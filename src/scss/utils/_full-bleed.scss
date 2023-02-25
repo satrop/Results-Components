@@ -1,0 +1,33 @@
+@use '../globals/breaks' as b;
+
+.full-bleed {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+
+    &.border-radius {
+        &--lg {
+            border-radius: 0;
+            border-bottom-left-radius: var(--br-lg);
+            border-bottom-right-radius: var(--br-lg);
+        }
+
+        &--sm {
+            border-radius: 0;
+            border-bottom-left-radius: var(--br-sm);
+            border-bottom-right-radius: var(--br-sm);
+        }
+    }
+
+    @include b.breakpoint(md) {
+        width: auto;
+        margin-left: unset;
+
+        &.border-radius--lg {
+            border-radius: var(--br-lg);
+        }
+
+        &.border-radius--sm {
+            border-radius: var(--br-sm);
+        }
+    }
+}
